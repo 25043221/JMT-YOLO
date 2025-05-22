@@ -1,6 +1,6 @@
 # JMT-YOLO: Multi-task Domain Adaptation via Segmentation-Guided Consistency Learning
 
-**[📄 Paper Title Placeholder - To be updated after acceptance]**
+**[📄 JMT-YOLO - To be updated after acceptance]**
 
 This repository will provide the official PyTorch implementation of **JMT-YOLO**, a joint multi-task learning framework for domain adaptive object detection. Code will be released upon acceptance of the paper.
 
