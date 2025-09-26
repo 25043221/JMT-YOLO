@@ -191,9 +191,9 @@ class Model(nn.Module):
             y.append(x if m.i in self.save else None)  # save output
             # print(f"Layer {m.i}: {m.type} - Output shape: {x.shape if isinstance(x, torch.Tensor) else [xi.shape for xi in x]}")
             # if isinstance(m, nn.Conv2d):
-            #     seg_output = x  # 保存 seg 层的输出
+            #     seg_output = x  
             if isinstance(m, SegMaskPSP):
-                seg_output = x  # 保存 seg 层的输出
+                seg_output = x  
 
             if feature_vis and m.type == 'models.common.SPP':
                 feature_visualization(x, m.type, m.i)

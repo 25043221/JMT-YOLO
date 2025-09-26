@@ -1,6 +1,7 @@
 # parameters
-nc: 21  # number of classes
-n_segcls: 21 # 分割类别数
+# Make modifications during training
+nc: 8  # number of classes
+n_segcls: 9 # Number of segmented classes
 depth_multiple: 1.0  # model depth multiple
 width_multiple: 1.0  # layer channel multiple
 
