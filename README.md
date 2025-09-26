@@ -34,7 +34,7 @@ Example YAMLs provided:
 ### Example (Cityscapes → FoggyCityscapes):
 Follow the preparation pipeline in [SSDA-YOLO](https://github.com/hnuzhy/SSDA-YOLO) to build the detection dataset (Cityscapes → FoggyCityscapes).
 
-Segmentation labels: Download `gtFine_trainvaltest.zip` from [website]（https://www.cityscapes-dataset.com） and extract the fine annotations (train/val). Requirements for the segmentation branch in this project:
+Segmentation dataset: Download `gtFine_trainvaltest.zip` from [website](https://www.cityscapes-dataset.com) and extract the fine annotations (train/val). Requirements for the segmentation branch in this project:
 * Convert each gtFine annotation to a single‑channel 8‑bit index mask (each pixel = class id) aligned 1:1 with the detection image; place under `segData/images/<split>/`.
 * Detection labels (YOLO txt) and segmentation masks must share the same filename stem (e.g. `frankfurt_000000_000294_leftImg8bit.png` ↔ `frankfurt_000000_000294_leftImg8bit.txt` ↔ `frankfurt_000000_000294_leftImg8bit.png` mask).
 * Foggy images come from `leftImg8bit_trainval_foggyDBF.zip` (select fog density `beta=0.02` among `(0.01, 0.02, 0.005)`).
