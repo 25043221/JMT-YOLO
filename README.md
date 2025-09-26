@@ -34,7 +34,7 @@ Example YAMLs provided:
 ### Example (Cityscapes → FoggyCityscapes):
 Follow the preparation pipeline in [SSDA-YOLO](https://github.com/hnuzhy/SSDA-YOLO) to build the detection dataset (Cityscapes → FoggyCityscapes).
 
-Segmentation labels: Download `gtFine_trainvaltest.zip` from the official website https://www.cityscapes-dataset.com/ and extract the fine annotations (train/val). Requirements for the segmentation branch in this project:
+Segmentation labels: Download `gtFine_trainvaltest.zip` from [website]（https://www.cityscapes-dataset.com） and extract the fine annotations (train/val). Requirements for the segmentation branch in this project:
 * Convert each gtFine annotation to a single‑channel 8‑bit index mask (each pixel = class id) aligned 1:1 with the detection image; place under `segData/images/<split>/`.
 * Detection labels (YOLO txt) and segmentation masks must share the same filename stem (e.g. `frankfurt_000000_000294_leftImg8bit.png` ↔ `frankfurt_000000_000294_leftImg8bit.txt` ↔ `frankfurt_000000_000294_leftImg8bit.png` mask).
 * Foggy images come from `leftImg8bit_trainval_foggyDBF.zip` (select fog density `beta=0.02` among `(0.01, 0.02, 0.005)`).
@@ -44,12 +44,11 @@ Keep directory hierarchy consistent with the YAML fields (`train_source_real`, `
 Quick setup steps:
 1. Download & extract: `leftImg8bit_trainvaltest.zip`, `gtFine_trainvaltest.zip`, `leftImg8bit_trainval_foggyDBF.zip`.
 2. Generate YOLO detection labels from original annotations (polygons → bounding boxes → YOLO txt).
-3. (Optional) Place Foggy and Normal style‑translated images into their respective real/fake domain folders.
+3. Place Foggy and Normal style‑translated images into their respective real/fake domain folders.
 4. Convert fine annotations to index mask PNGs and place them into the `segData` directory structure.
 5. Update or verify paths and `nc / n_segcls` in `data/yamls_sda/cityscapes_csfoggy_VOC.yaml`.
 
 ---
-
 
 
 ## Training and Testing
