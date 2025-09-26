@@ -1,6 +1,4 @@
-# JMT-YOLO
-
-Multi-task Domain Adaptation via Segmentation-Guided Consistency Learning
+# JMT-YOLO：Multi-task Domain Adaptation via Segmentation-Guided Consistency Learning
 
 ## Installation
 
