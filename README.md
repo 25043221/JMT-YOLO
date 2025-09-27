@@ -46,6 +46,18 @@ Quick setup steps:
 4. Convert fine annotations to index mask PNGs and place them into the `segData` directory structure.
 5. Update or verify paths and `nc / n_segcls` in `data/yamls_sda/cityscapes_csfoggy_VOC.yaml`.
 
+#### Other Dataset Pairs 
+
+PascalVOC → Clipart1k:
+* Pascal VOC 2007+2012: [Official Site](http://host.robots.ox.ac.uk/pascal/VOC/)
+* Clipart1k: Cross-Domain Detection repo ([naoto0804/cross-domain-detection](https://github.com/naoto0804/cross-domain-detection))
+
+KITTI → Cityscapes:
+* KITTI Detection: [KITTI Website](http://www.cvlibs.net/datasets/kitti/)
+* Cityscapes: [Cityscapes Website](https://www.cityscapes-dataset.com/)
+
+Use analogous steps: prepare YOLO txt labels, optional style-transfer fake domains, and (if using segmentation) produce index masks aligned to images.
+
 ---
 
 
@@ -76,12 +88,10 @@ python test.py \
 ```
 ---
 
+## Pre-trained Weights
 
-## References
-* YOLOv5: https://github.com/ultralytics/yolov5
-* SSDA-YOLO: https://github.com/hnuzhy/SSDA-YOLO
-* MIC: https://github.com/lhoyer/MIC
-* CUT: https://github.com/taesungp/contrastive-unpaired-translation
+You can download the pre-trained weights from the following links:
 
----
+- [Google Drive](https://drive.google.com/drive/folders/13HgfP4aSkS-NUF45Rp4H5eKsxOSFQ4iH?usp=sharing)
+
 
