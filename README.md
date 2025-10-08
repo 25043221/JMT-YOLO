@@ -88,5 +88,11 @@ python test.py \
 ```
 ---
 
+## Pre-trained Weights
+
+You can download the pre-trained weights from the following links:
+
+- [Google Drive](https://drive.google.com/drive/folders/13HgfP4aSkS-NUF45Rp4H5eKsxOSFQ4iH?usp=sharing)
+
 
 
