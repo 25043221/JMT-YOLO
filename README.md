@@ -56,7 +56,7 @@ KITTI → Cityscapes:
 * KITTI Detection: [KITTI Website](http://www.cvlibs.net/datasets/kitti/)
 * Cityscapes: [Cityscapes Website](https://www.cityscapes-dataset.com/)
 
-Use analogous steps: prepare YOLO txt labels, optional style-transfer fake domains, and (if using segmentation) produce index masks aligned to images.
+Use analogous steps: prepare YOLO txt labels, style-transfer fake domains, and produce index masks aligned to images.
 
 ---
 
