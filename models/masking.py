@@ -124,8 +124,8 @@ class Masking(nn.Module):
         input_mask = (input_mask > self.ratio).float()
         input_mask = resize(input_mask, size=(H, W))
 
-        # masked_img = img * input_mask
-        noise =torch.randn_like(img)*std+mean
-        masked_img = img * input_mask+noise*(1-input_mask)
+        masked_img = img * input_mask
+        # noise =torch.randn_like(img)*std+mean
+        # masked_img = img * input_mask+noise*(1-input_mask)
         return masked_img
 
