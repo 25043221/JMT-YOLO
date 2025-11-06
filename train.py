@@ -571,8 +571,8 @@ def train(hyp, opt, device):
                 model_teacher.eval()
                 pred_tf, train_out = model_teacher(imgs_tf)  # forward. when eval(), the output is (x1, x2) in yolo.py
                 nms_pred_tf = pred_tf[0]
-                # det_pred_tf = pred_tf[1]
-                # seg_pred_tf = train_out
+                det_pred_tf = pred_tf[1]
+                seg_pred_tf = train_out
                 pred_tf_nms = non_max_suppression(nms_pred_tf, conf_thres=conf_thres, iou_thres=iou_thres,
                                                   max_det=max_gt_boxes, multi_label=True,
                                                   agnostic=single_cls)  # pred_tf_nms type is list with batch_size length
@@ -608,7 +608,7 @@ def train(hyp, opt, device):
                 masked_target_images = masking(imgs_tr.clone().detach())
                 mask_pred_tr = model_student(masked_target_images)
                 seg_mask_pred_tr = mask_pred_tr[1]
-                probs_teacher = F.softmax(seg_pred_tr, dim=1)
+                probs_teacher = F.softmax(seg_pred_tf, dim=1)
                 probs_student = F.softmax(seg_mask_pred_tr, dim=1)
                 # mask_loss = -torch.sum(probs_teacher * torch.log(probs_student)) / probs_teacher.numel()
                 mask_loss = -torch.sum(probs_teacher * torch.log(probs_student + 1e-8)) / probs_teacher.numel()
